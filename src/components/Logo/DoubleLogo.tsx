@@ -1,4 +1,4 @@
-import { Currency } from '@wagyu-swap/sdk'
+import { Currency } from '@vanilla-swap/sdk'
 import React from 'react'
 import styled from 'styled-components'
 import CurrencyLogo from './CurrencyLogo'

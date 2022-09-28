@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import React, { useMemo, ReactNode } from 'react'
 import ReactDOM from 'react-dom'
 import useActiveWeb3React from './hooks/useActiveWeb3React'
@@ -7,6 +8,8 @@ import MulticallUpdater from './state/multicall/updater'
 import TransactionUpdater from './state/transactions/updater'
 import App from './App'
 import Providers from './Providers'
+
+dotenv.config()
 
 function Updaters() {
   return (

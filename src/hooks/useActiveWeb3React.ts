@@ -20,7 +20,6 @@ const useActiveWeb3React = (): Web3ReactContextInterface<Web3Provider> => {
       refEth.current = library
     }
   }, [library])
-
   return { library: provider, chainId: chainId ?? parseInt(process.env.REACT_APP_CHAIN_ID, 10), ...web3React }
 }
 

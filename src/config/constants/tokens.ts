@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@wagyu-swap/sdk'
+import { ChainId, Token } from '@vanilla-swap/sdk'
 import { serializeToken } from 'state/user/hooks/helpers'
 import { SerializedToken } from './types'
 import addresses from './addresses.json'
@@ -16,10 +16,10 @@ interface SerializedTokenList {
 }
 
 export const mainnetTokens = {
-  wvlx: new Token(MAINNET, addresses[106].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://wagyuswap.app/'),
+  wvlx: new Token(MAINNET, addresses[ChainId.MAINNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://wagyuswap.app/'),
   // bnb here points to the wbnb contract. Wherever the currency BNB is required, conditional checks for the symbol 'BNB' can be used
-  vlx: new Token(MAINNET, addresses[106].WVLX, 18, 'VLX', 'VLX', 'https://wagyuswap.app/'),
-  cake: new Token(MAINNET, addresses[106].WAGToken, 18, 'WAG', 'WAGToken', 'https://wagyuswap.app/'),
+  vlx: new Token(MAINNET, addresses[ChainId.MAINNET].WVLX, 18, 'VLX', 'VLX', 'https://wagyuswap.app/'),
+  cake: new Token(MAINNET, addresses[ChainId.MAINNET].WAGToken, 18, 'WAG', 'WAGToken', 'https://wagyuswap.app/'),
   usdt: new Token(
     MAINNET,
     '0x01445C31581c354b7338AC35693AB2001B50b9aE',
@@ -142,17 +142,31 @@ export const mainnetTokens = {
     'Velas Pad',
     'https://velaspad.io/',
   ),
-  syrup: new Token(TESTNET, addresses[106].WAGStake, 18, 'WAGStake', 'WAGStake Token', 'https://wagyuswap.app/'),
-  // te6: new Token(TESTNET, addresses[111].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
-  // te9: new Token(TESTNET, addresses[111].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
-  // te12: new Token(TESTNET, addresses[111].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
-  // te18: new Token(TESTNET, addresses[111].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
+  syrup: new Token(
+    TESTNET,
+    addresses[ChainId.MAINNET].WAGStake,
+    18,
+    'WAGStake',
+    'WAGStake Token',
+    'https://wagyuswap.app/',
+  ),
+  // te6: new Token(TESTNET, addresses[ChainId.TESTNET].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te9: new Token(TESTNET, addresses[ChainId.TESTNET].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te12: new Token(TESTNET, addresses[ChainId.TESTNET].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te18: new Token(TESTNET, addresses[ChainId.TESTNET].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
 }
 
 export const testnetTokens = {
-  wvlx: new Token(TESTNET, addresses[111].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://wagyuswap.app/'),
-  cake: new Token(TESTNET, addresses[111].WAGToken, 18, 'WAG', 'WAGToken', 'https://wagyuswap.app/'),
-  syrup: new Token(TESTNET, addresses[111].WAGStake, 18, 'WAGStake', 'WAGStake Token', 'https://wagyuswap.app/'),
+  wvlx: new Token(TESTNET, addresses[ChainId.TESTNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://wagyuswap.app/'),
+  cake: new Token(TESTNET, addresses[ChainId.TESTNET].WAGToken, 18, 'WAG', 'WAGToken', 'https://wagyuswap.app/'),
+  syrup: new Token(
+    TESTNET,
+    addresses[ChainId.TESTNET].WAGStake,
+    18,
+    'WAGStake',
+    'WAGStake Token',
+    'https://wagyuswap.app/',
+  ),
   usdt: new Token(
     TESTNET,
     '0x6Ef054B3E3C3C83E14527E8fa593c2c4435A6ea4',
@@ -185,10 +199,10 @@ export const testnetTokens = {
     'Multichain WETH',
     'https://wagyuswap.app/',
   ),
-  te6: new Token(TESTNET, addresses[111].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te9: new Token(TESTNET, addresses[111].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te12: new Token(TESTNET, addresses[111].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te18: new Token(TESTNET, addresses[111].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
+  te6: new Token(TESTNET, addresses[ChainId.TESTNET].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
+  te9: new Token(TESTNET, addresses[ChainId.TESTNET].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
+  te12: new Token(TESTNET, addresses[ChainId.TESTNET].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
+  te18: new Token(TESTNET, addresses[ChainId.TESTNET].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
 }
 
 const tokens = (): TokenList => {
@@ -200,6 +214,11 @@ const tokens = (): TokenList => {
     return Object.keys(testnetTokens).reduce((accum, key) => {
       return { ...accum, [key]: testnetTokens[key] || mainnetTokens[key] }
     }, {})
+  }
+
+  if (chainId === ChainId.DEVNET) {
+    // KYLE-TODO We need to handle that here still
+    return mainnetTokens
   }
 
   return mainnetTokens

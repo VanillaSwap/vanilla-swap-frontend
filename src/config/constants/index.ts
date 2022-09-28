@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token } from '@wagyu-swap/sdk'
+import { ChainId, JSBI, Percent, Token } from '@vanilla-swap/sdk'
 import { mainnetTokens, testnetTokens } from './tokens'
 import addresses from './addresses.json'
 
@@ -21,6 +21,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     mainnetTokens.usdv,
   ],
   [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.DEVNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
 }
 
 /**
@@ -44,12 +45,14 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MAINNET]: [mainnetTokens.usdt, mainnetTokens.cake],
   [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.DEVNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [mainnetTokens.wvlx, mainnetTokens.usdt, mainnetTokens.usdc],
   [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
+  [ChainId.DEVNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {

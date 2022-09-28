@@ -30,7 +30,7 @@ import { getMulticallAddress } from 'utils/addressHelpers'
 
 // Imports below migrated from Exchange useContract.ts
 import { Contract } from '@ethersproject/contracts'
-import { ChainId, WETH } from '@wagyu-swap/sdk'
+import { ChainId, WETH } from '@vanilla-swap/sdk'
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import ENS_PUBLIC_RESOLVER_ABI from '../config/abi/ens-public-resolver.json'
 import ENS_ABI from '../config/abi/ens-registrar.json'
@@ -212,6 +212,7 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
     switch (chainId) {
       case ChainId.MAINNET:
       case ChainId.TESTNET:
+      case ChainId.DEVNET:
         address = '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
         break
     }

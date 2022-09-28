@@ -22,6 +22,9 @@ const PANCAKE_DAY_DATAS = gql`
 
 const getOverviewChartData = async (skip: number): Promise<{ data?: ChartEntry[]; error: boolean }> => {
   try {
+    /* eslint-disable no-console */
+    console.log(INFO_CLIENT)
+    /* eslint-enable no-console */
     const { pancakeDayDatas } = await request<PancakeDayDatasResponse>(INFO_CLIENT, PANCAKE_DAY_DATAS, {
       startTime: PCS_V2_START,
       skip,

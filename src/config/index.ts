@@ -1,4 +1,4 @@
-import { ChainId } from '@wagyu-swap/sdk'
+import { ChainId } from '@vanilla-swap/sdk'
 import BigNumber from 'bignumber.js/bignumber'
 import { BIG_TEN } from 'utils/bigNumber'
 
@@ -12,6 +12,7 @@ export const VELAS_BLOCK_TIME = 0.4
 export const BASE_VELAS_SCAN_URLS = {
   [ChainId.MAINNET]: 'https://evmexplorer.velas.com',
   [ChainId.TESTNET]: 'https://evmexplorer.testnet.velas.com',
+  [ChainId.DEVNET]: 'https://evmexplorer.testnet.velas.com',
 }
 
 // WAG_PER_SECOND details

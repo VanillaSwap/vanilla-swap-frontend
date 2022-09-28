@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@wagyu-swap/sdk'
+import { ChainId, Token } from '@vanilla-swap/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
@@ -53,6 +53,7 @@ export type TokenAddressMap = Readonly<
 const EMPTY_LIST: TokenAddressMap = {
   [ChainId.MAINNET]: {},
   [ChainId.TESTNET]: {},
+  [ChainId.DEVNET]: {},
 }
 
 const listCache: WeakMap<TokenList, TokenAddressMap> | null =
@@ -105,6 +106,7 @@ function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddress
   return {
     [ChainId.MAINNET]: { ...map1[ChainId.MAINNET], ...map2[ChainId.MAINNET] },
     [ChainId.TESTNET]: { ...map1[ChainId.TESTNET], ...map2[ChainId.TESTNET] },
+    [ChainId.DEVNET]: { ...map1[ChainId.DEVNET], ...map2[ChainId.DEVNET] },
   }
 }
 

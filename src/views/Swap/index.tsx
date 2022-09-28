@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
-import { CurrencyAmount, JSBI, Token, Trade } from '@wagyu-swap/sdk'
+import { CurrencyAmount, Token, Trade } from '@vanilla-swap/sdk'
+import JSBI from 'jsbi'
 import { Button, Text, ArrowDownIcon, Box, useModal } from 'packages/uikit'
 import { useIsTransactionUnsupported } from 'hooks/Trades'
 import UnsupportedCurrencyFooter from 'components/UnsupportedCurrencyFooter'
