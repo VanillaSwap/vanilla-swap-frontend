@@ -10,7 +10,9 @@ const getTokenLogoURL = (address: string) => {
   } else if (parseInt(chainId, 10) === ChainId.DEVNET) {
     append = '-dev'
   }
-  return `https://github.com/VanillaSwap/vanilla-swap-assets/tree/master/blockchains/velas${append}/assets/${address.toLowerCase()}/logo.png?raw=true`
+  return `https://raw.githubusercontent.com/VanillaSwap/vanilla-swap-assets/master/blockchains/velas${append}/assets/${address.toLowerCase()}/logo.png`
+  // This does not seem to work any more
+  // return `https://github.com/VanillaSwap/vanilla-swap-assets/tree/master/blockchains/velas${append}/assets/${address.toLowerCase()}/logo.png?raw=true`
 }
 
 export default getTokenLogoURL

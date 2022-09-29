@@ -1,6 +1,7 @@
 import { ChainId } from '@vanilla-swap/sdk'
 import BigNumber from 'bignumber.js/bignumber'
 import { BIG_TEN } from 'utils/bigNumber'
+import NETWORK_URLS from './constants/networks'
 
 BigNumber.config({
   EXPONENTIAL_AT: 1000,
@@ -9,11 +10,7 @@ BigNumber.config({
 
 export const VELAS_BLOCK_TIME = 0.4
 
-export const BASE_VELAS_SCAN_URLS = {
-  [ChainId.MAINNET]: 'https://evmexplorer.velas.com',
-  [ChainId.TESTNET]: 'https://evmexplorer.testnet.velas.com',
-  [ChainId.DEVNET]: 'https://evmexplorer.testnet.velas.com',
-}
+export const BASE_VELAS_SCAN_URLS = NETWORK_URLS
 
 // WAG_PER_SECOND details
 // 40 WAG is minted per block
