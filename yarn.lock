@@ -3002,7 +3002,7 @@
   "version" "1.0.1"
 
 "@vanilla-swap/sdk@https://github.com/VanillaSwap/vanilla-swap-sdk":
-  "resolved" "git+ssh://git@github.com/VanillaSwap/vanilla-swap-sdk.git#7fc1ca71365644ec8caaa989f33a52fa89c9f37a"
+  "resolved" "git+ssh://git@github.com/VanillaSwap/vanilla-swap-sdk.git#8a8796c3de8aee45a1175043cac3f7d0690fcbcc"
   "version" "2.4.0"
   dependencies:
     "@vanilla-swap-libs/vanilla-swap-core" "https://github.com/VanillaSwap/vanilla-swap-core.git"

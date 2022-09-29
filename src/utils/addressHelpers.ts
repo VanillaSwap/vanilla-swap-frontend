@@ -1,4 +1,4 @@
-import { ChainId } from '@vanilla-swap/sdk'
+import { ChainId, ADDRESSES } from '@vanilla-swap/sdk'
 import addresses from 'config/constants/contracts'
 import { Address } from 'config/constants/types'
 
